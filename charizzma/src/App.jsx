@@ -2,27 +2,27 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Module from './module'
 
 function App() {
   
+  const [showModule, setShowModule] = useState(false)
+
+  const handleClick = () => {
+    console.log("clicked!")
+    setShowModule(true)
+  }
 
   return (
     <>
-     <div className='create'>
+     <div className='create' onClick={handleClick}>
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-plus-lg" viewBox="0 0 16 16">
       <path fillRule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
       </svg>
      </div>
 
-    <div className='module'>
-      <div className='opt'>
-        <p>Greet a stranger👋</p>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-plus-lg" viewBox="0 0 16 16">
-      <path fillRule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
-      </svg>
-        </div>
-    </div>
-
+      {showModule && <Module />}
+    
     </>
   )
 }

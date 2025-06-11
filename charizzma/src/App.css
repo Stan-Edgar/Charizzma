@@ -9,21 +9,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid rgb(84, 84, 84);
+  border: 2px solid rgb(51, 137, 155);
   border-radius: 10px;
   width: 3rem;
   height: 3rem;
-  background-color: rgb(206, 206, 206);
+  background-color: rgb(60, 77, 255);
 }
 
 .create svg {
-  fill: black;
+  fill: white;
   width: 2rem;
   height: 2rem;
 }
 
 .create:hover {
-  border: 3x solid rgb(84, 84, 84);
+  border: 3x solid rgb(51, 137, 155);
   box-shadow: 0px 5px 0px 0px #545454;
   cursor: pointer;
 }
@@ -32,22 +32,31 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid rgb(84, 84, 84);
   border-radius: 10px;
   width: 18rem;
-  height: 24rem;
+  height: 22rem;
   padding: 2rem 0;
-  background-color: rgb(206, 206, 206);
+  row-gap: 20px;
+  background-color: #131F24;
 }
 
 .opt {
   display: flex;
-  color: black;
-  background-color: white;
+  color: white;
+  background-color: rgb(60, 77, 255);
   padding: 0 1rem;
   border: 0;
   border-radius: 15px;
   align-items: center;
   width: 14rem;
   justify-content: space-between;
+  box-shadow: inset 0px -7px 4px 0px rgb(33, 58, 169);
+}
+
+.opt svg {
+  cursor: pointer;
+}
+
+.opt svg:hover {
+  fill: black;
 }
